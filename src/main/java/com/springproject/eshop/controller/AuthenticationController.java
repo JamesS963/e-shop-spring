@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.springproject.eshop.model.User;
+import com.springproject.eshop.service.ItemService;
 import com.springproject.eshop.service.UserService;
 
 @Controller

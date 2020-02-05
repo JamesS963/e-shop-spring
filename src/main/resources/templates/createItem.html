@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>CreateItem</title>
+</head>
+<body>
+	<div th:include="/fragments/navbar.html"></div>
+	<form class="box" th:action="@{/createItem}" method="post"
+		th:object="${item}">
+		<h1>Login</h1>
+		<input type="text" name="" placeholder="name" th:field="*{name}"
+			required> <input type="number" name="" placeholder="Quantity"
+			th:field="*{quantity}" required> <input type="number" name=""
+			placeholder="price(£)" th:field="*{price}" min="0.00" step="0.01"
+			required> <input type="submit" name="" value="Login">
+		<p th:text="${error}"></p>
+	</form>
+</body>
+</html>
