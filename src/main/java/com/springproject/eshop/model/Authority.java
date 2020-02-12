@@ -18,9 +18,11 @@ public class Authority {
 	@Column(nullable = false, unique = true)
 	@Enumerated(EnumType.STRING)
 	private AuthorityType authorityType;
-	
-	public Authority() {};
+
+	public Authority() {
+	};
+
 	public Authority(AuthorityType authorityType) {
-		this.authorityType= authorityType;
+		this.authorityType = authorityType;
 	}
 }

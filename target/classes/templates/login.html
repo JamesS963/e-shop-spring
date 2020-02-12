@@ -5,14 +5,12 @@
 <title>Login</title>
 </head>
 <body>
-	<form class="box" th:action="@{/login}" method="post"
-		th:object="${user}">
+	<form class="box" th:action="@{/login}" method="post" th:object="${user}">
 		<h1>Login</h1>
-		<input type="text" name="" placeholder="Username"
-			th:field="*{username}" required> <input type="password"
-			name="" placeholder="Password" th:field="*{password}" required>
-		<input type="submit" name="" value="Login"> <a
-			class="box_links" th:href="@{/register}">Register</a>
+		<input type="text" name="" placeholder="Username" th:field="*{username}" required>
+		<input type="password"name="" placeholder="Password" th:field="*{password}" required>
+		<input type="submit" name="" value="Login">
+		 <a class="box_links" th:href="@{/register}">Register</a>
 		<p th:text="${error}"></p>
 	</form>
 </body>
